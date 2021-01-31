@@ -1,9 +1,44 @@
-Seu nome
-@seunome
-Editar
-Projetos
-27
-Estrelas
-302
-Seguidores
-83
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="userInfo">
+                <img src="https://rodcordeiro.github.io/shares/img/avatar.png" alt="Avatar">
+                <div class="UserText">
+                    <h3>Rodrigo Cordeiro</h3>
+                    <p><span>@</span>rodcordeiro</p>
+                </div>
+            </div>
+            <button>
+                <i data-feather="edit"></i>
+                <span>Editar</span>
+            </button>
+        </header>
+        <section>
+            <div class="card projects">
+                <h3>Projetos</h3>
+                <p>27</p>
+            </div>
+            <div class="card stars">
+                <h3>Estrelas</h3>
+                <p>302</p>
+            </div>
+            <div class="card followers">
+                <h3>Seguidores</h3>
+                <p>83</p>
+            </div>
+        </section>
+    </main>    
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

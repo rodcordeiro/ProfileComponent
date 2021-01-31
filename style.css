@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&family=Roboto:wght@100;400;700&family=Rubik:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Rubik', sans-serif;
+
+Preto: #0C0B0B
+Cinza: #0F0E0E
+Branco: #B7B7B7
+Verde: #046313
+Azul: #044A7D
+Amarelo: #725200 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #B7B7B7;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background:#0C0B0B;
+}
+.container{
+    background-color:#0F0E0E;
+    width:60vw;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:2rem 4rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.userInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userInfo img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    margin: 20px;
+}
+
+.UserText h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.UserText p {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: lighter;
+}
+.UserText p span{
+    color: #ff5900;
+}
+header button{
+    background-color: #3339;
+    border:none;
+    outline:none;
+    padding:0.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header button span {
+    padding-left: 10px;
+}
+section{
+    display: flex;
+    justify-content:space-around;
+    padding:1rem;
+}
+.card{
+    height:5rem;
+    width:25vw;
+    margin: 0.5rem 1rem;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.card h3{
+    font-size: 1rem;
+    font-weight: normal;
+}
+.card p {
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.card.projects{
+    background-color:#046313;
+}
+.card.stars{
+    background-color:#044A7D;
+}
+.card.followers{
+    background-color:#725200;
+}
+
+@media(max-width: 986px){
+    .container{
+        width: 100%;
+        height:100%;
+    }
+    .userInfo,header,section{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .UserText{
+        text-align: center;
+    }
+    button{
+        margin-top:0.5rem;
+    }
+    .card{
+        /* width:100%; */
+    }    
+}

@@ -73,6 +73,7 @@ header button{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor:pointer;
 }
 header button span {
     padding-left: 10px;

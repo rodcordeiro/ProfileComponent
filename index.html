@@ -39,6 +39,14 @@
     </main>    
     <script>
         feather.replace()
+        const stats = ["projects", "stars", "followers"]
+
+        stats.forEach((status)=>{
+            const number = Math.floor(Math.random() * 100 + 1)
+            const container = document.querySelector(`.card.${status}>p`)
+            container.innerHTML = number
+            console.log(container)
+        })
     </script>
 </body>
 </html>

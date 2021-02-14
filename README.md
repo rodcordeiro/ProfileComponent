@@ -10,7 +10,7 @@
     <br />
     <a href="https://github.com/devchallenge-io/profile-component">Desafio</a>
     ·
-    <a href="https://www.devchallenge.com.br/">DevChallenge</a>
+    <a href="https://devchallenge.com.br/challenges/5f0b4acaa5fec43156149044/details">DevChallenge</a>
   </p>
 </p>
 

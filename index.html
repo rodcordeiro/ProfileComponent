@@ -14,10 +14,10 @@
                 <img src="https://rodcordeiro.github.io/shares/img/avatar.png" alt="Avatar">
                 <div class="UserText">
                     <h3>Rodrigo Cordeiro</h3>
-                    <p><span>@</span>rodcordeiro</p>
+                    <p><span id="at">@</span><span id="user">R0dC0rdeiro</span></p>
                 </div>
             </div>
-            <button>
+            <button onclick="toggleModal()">
                 <i data-feather="edit"></i>
                 <span>Editar</span>
             </button>
@@ -36,17 +36,49 @@
                 <p>83</p>
             </div>
         </section>
-    </main>    
+    </main>
+    <div class="modal hidden">
+        <button onclick="toggleModal()">
+            Close
+        </button>
+        <input type="text" name="name" id="name" placeholder="" />
+        <input type="text" name="username" id="username" placeholder=""/>
+        <button onclick="EditName()">
+            Atualizar
+        </button>
+    </div>
     <script>
         feather.replace()
         const stats = ["projects", "stars", "followers"]
-
         stats.forEach((status)=>{
             const number = Math.floor(Math.random() * 100 + 1)
             const container = document.querySelector(`.card.${status}>p`)
             container.innerHTML = number
-            console.log(container)
         })
+        const currentName = document.querySelector('.UserText h3').textContent
+        const currentUsername = document.querySelector('span#user').textContent
+        const nameInput = document.querySelector('input#name')
+        const usernameInput = document.querySelector('input#username')
+        
+        nameInput.setAttribute('value', currentName)
+        usernameInput.setAttribute('value', `@${currentUsername}`)
+       
+        function toggleModal(){
+            const modal = document.querySelector('.modal')
+            modal.classList.toggle('hidden');
+        }
+        
+        function EditName(){
+            const nameElmt = document.querySelector('.UserText h3')
+            const usernameElmt = document.querySelector('span#user')
+            const nameInput = document.querySelector('input#name').value
+            const usernameInput = document.querySelector('input#username').value.replace('@','')
+            
+            nameElmt.textContent = nameInput
+            usernameElmt.textContent = usernameInput
+
+            toggleModal()
+        }
     </script>
 </body>
 </html>
